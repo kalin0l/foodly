@@ -31,9 +31,10 @@ export default function Home() {
         {meals &&
           meals.length > 0 &&
           meals.slice(0, 5).map((meal, i) => {
-            const { strMealThumb, strMeal, strArea, strCategory } = meal;
+            const { strMealThumb, strMeal, strArea, strCategory,idMeal } = meal;
+            console.log(meal);
             return (
-              <div key={i} className={classes.meals} onClick={() => showMeal(i)}>
+              <div key={idMeal} className={classes.meals} onClick={() => showMeal(i)}>
                 <img src={strMealThumb} alt={strMeal} />
                 <h3>{strMeal}</h3>
                 <div className={classes.details}>
