@@ -78,6 +78,10 @@
     color: black;
     font-size: 20px;
 }
+
+.instr p {
+    font-size: 12.5px;
+}
 .instr span {
     border-radius: 20px;
     padding: 0 10px;
@@ -109,7 +113,13 @@
     cursor: pointer;
     margin-bottom: 2rem;
     display: flex;
+    justify-content: center;
+    align-items: center;
     
+}
+.heading_info button a {
+    text-decoration: none;
+    color: white;
 }
 .heading_info button img {
     margin-right: 10px;

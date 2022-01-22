@@ -3,8 +3,11 @@ import classes from "./modal.module.css";
 import { MealContext } from "../../context/context";
 import { useContext } from "react";
 import playBtn from "../../assets/icon-play.svg";
+import { useParams } from "react-router-dom";
 
-export default function Modal({ children }) {
+export default function Modal() {
+  const { id } = useParams();
+  console.log(id);
   const { displayedMeal, setIsDisplayed, isDisplayed } =
     useContext(MealContext);
   console.log(displayedMeal);
@@ -17,6 +20,9 @@ export default function Modal({ children }) {
     strIngredient4,
     strIngredient5,
     strInstructions,
+    strCategory,
+    strArea,
+    strYoutube,
   } = displayedMeal;
 
   return (
@@ -31,7 +37,10 @@ export default function Modal({ children }) {
             <div className={classes.heading_info}>
               <h1>{strMeal}</h1>
               <button type="button">
-                <img src={playBtn} alt="play" /> Play video
+                  <img src={playBtn} alt="play" /> 
+                <a href={strYoutube}>
+                Play video
+                </a>
               </button>
             </div>
           </div>
@@ -83,8 +92,8 @@ export default function Modal({ children }) {
                   basil and serve warm.
                 </p>
               )}
-              <span>Pasta</span>
-              <span>Curry</span>
+              {strCategory ? <span>{strCategory}</span> : <span>Pasta</span>}
+              {strArea ? <span>{strArea}</span> : <span>Curry</span>}
             </div>
           </div>
         </div>
