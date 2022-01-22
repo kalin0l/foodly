@@ -10,10 +10,18 @@ export default function Home() {
   const { search, setSearch, italianFood, seafood, loading, food,setIsDisplayed,isDiplayed,setDisplayedMeal,displayedMeal } =
     useContext(MealContext);
   const { meals } = food;
-  console.log(meals);
+  console.log(meals,seafood,italianFood);
   const showMeal = (i) => {
     setIsDisplayed(!isDiplayed)
     setDisplayedMeal(meals[i])
+  }
+  const showItalian = (i) => {
+    setIsDisplayed(!isDiplayed)
+    setDisplayedMeal(italianFood.meals[i])
+  }
+  const showSeaFood = (i) => {
+    setIsDisplayed(!isDiplayed)
+    setDisplayedMeal(seafood.meals[i])
   }
 
   const searchForFood = (
@@ -48,7 +56,7 @@ export default function Home() {
           seafood.meals.slice(0, 4).map((meal, id) => {
             const { strMealThumb, strMeal } = meal;
             return (
-              <div key={id} className={classes.seameals} onClick={() => showMeal(id)} >
+              <div key={id} className={classes.seameals} onClick={() => showSeaFood(id)} >
                 <img src={strMealThumb} alt={strMeal} />
                 <h3>{strMeal}</h3>
                 <div className={classes.details}>
@@ -66,7 +74,7 @@ export default function Home() {
           italianFood.meals.slice(0, 4).map((meal, id) => {
             const { strMealThumb, strMeal } = meal;
             return (
-                <div key={id} className={classes.italianfood} onClick={() => showMeal(id)}>
+                <div key={id} className={classes.italianfood} onClick={() => showItalian(id)}>
                   <img src={strMealThumb} alt={strMeal} />
                   <h3>{strMeal}</h3>
                   <div className={classes.details}>
