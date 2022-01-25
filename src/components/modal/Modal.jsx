@@ -46,7 +46,7 @@ export default function Modal() {
           </div>
           <div className={classes.desc_container}>
             <div className={classes.ingr}>
-              <h3>Ingredients</h3>
+              <h5>Ingredients</h5>
               {strIngredient1 ? (
                 <span>👉{strIngredient1}</span>
               ) : (
@@ -74,7 +74,7 @@ export default function Modal() {
               )}
             </div>
             <div className={classes.instr}>
-              <h3>instructions</h3>
+              <h5>instructions</h5>
               {strInstructions ? (
                 <p>{strInstructions}</p>
               ) : (
