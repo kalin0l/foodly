@@ -11,13 +11,11 @@
 .modal_main {
     position: fixed;
     background-color: white;
-    width: 80%;
-    height: auto;
-    top:30%;
-    left:50%;
-    transform: translate(-50%,-50%);
-    height: 60vh;
-    width: 60vw;
+    top: 24%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 900px;
+    width: 1060px;
 }
 .none {
     display: none;
@@ -36,9 +34,9 @@
 } */
 .img {
     position: absolute;
-    width: 20rem;
-    height: 20rem;
-    top: -4rem;
+    width: 441.81px;
+    height: 417px;
+    top: -30px;
     left: -3rem;
     border-radius: 10px;
 }
@@ -49,7 +47,7 @@
     align-items: center;
     margin-top: 1rem;
 }
-.ingr h3 {
+.ingr h5 {
     font-size: 30px;
     font-weight: bold;
     margin-bottom: 10px;
@@ -57,11 +55,11 @@
     color: black;
 }
 .ingr span {
-    background-color: lightgray;
+    background-color: #F9F9F9;
     color: black;
     padding: 10px 40px 10px 10px;
     margin-top: 5px;
-    border-radius: 20px;
+    border-radius: 15px;
     width: 15rem;
 }
 .desc_container {
@@ -73,20 +71,23 @@
     width: 50%;
     height: 20%;
 }
-.instr h3 {
+.instr h5 {
     text-transform: uppercase;
     color: black;
     font-size: 20px;
+    font-weight: bold;
 }
 
 .instr p {
-    font-size: 12.5px;
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 1rem;
 }
 .instr span {
     border-radius: 20px;
     padding: 0 10px;
-    color: orange;
-    border: 2px solid orange;
+    color: #eb6237;
+    border: 2px solid #eb6237;
     margin-left: 5px;
 }
 .heading_info {
@@ -94,16 +95,16 @@
     flex-direction: column;
     justify-content: flex-end;
     align-items: center;
-   
 }
 .heading_info h1 {
     color: black;
     font-weight: bold;
     margin-bottom: 2rem;
-    font-size: 20px;
+    margin-left: 25rem;
+    font-size: 40px;
 }
 .heading_info button {
-    background-color: rgb(245, 209, 4);
+    background-color: #fac234;
     color: white;
     padding: 10px;
     border: none;
@@ -115,7 +116,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    margin-left: 13rem;
 }
 .heading_info button a {
     text-decoration: none;
