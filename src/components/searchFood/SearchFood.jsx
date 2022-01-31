@@ -15,7 +15,7 @@ export default function SearchFood() {
 
   return (
     <div>
-      <h1>Here's what we found:</h1>
+      <h1 className={classes.search}>Here's what we found:</h1>
       <div className={classes.container}>
         {meals &&
           meals.length > 0 &&

@@ -19,7 +19,7 @@ export default function Template(){
     return (
         <>
         <div className={classes.main}>
-      <h1>🌊 DOWN FOR seafood tonight?</h1>
+      <h1 className={classes.seafood_heading}>🌊 DOWN FOR seafood tonight?</h1>
       <div className={classes.seafood}>
         {seafood &&
           seafood.meals &&
@@ -37,7 +37,7 @@ export default function Template(){
             );
           })}
       </div>
-      <h1>🍝 MAYBE some italian?</h1>
+      <h1 className={classes.italian_heading}>🍝 MAYBE some italian?</h1>
       <div className={classes.italian}>
         {italianFood &&
           italianFood.meals &&
